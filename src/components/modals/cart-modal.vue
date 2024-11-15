@@ -50,7 +50,7 @@ const formatProducts = computed(() => formatProductCount(countProducts.value));
         <img
           class="list-product__image"
           :class="inStockClass(prod.item)"
-          :src="`src/assets/images/${prod.item.image}.png`"
+          :src="`/images/${prod.item.image}.png`"
           :alt="`${prod.item.name} ${prod.item.color} ${prod.item.code}`"
         />
 

@@ -22,12 +22,12 @@ const isCart = computed(
     <div class="image-container">
       <img
         class="product-image"
-        :src="`src/assets/images/${item.image}.png`"
+        :src="`/images/${item.image}.png`"
         :alt="`${item.name} ${item.color} ${item.code}`"
       />
       <img
         class="product-image--hover"
-        src="@/assets/images/hover-cart.jpg"
+        src="/images/hover-cart.jpg"
         alt="Краска Wallquest, Brownsone MS90102"
       />
     </div>

@@ -19,7 +19,7 @@ const openCart = ref(false);
       </button>
 
       <a href="/public" class="logo">
-        <img src="@/assets/images/logo.png" />
+        <img src="/images/logo.png" />
       </a>
 
       <the-nav />

@@ -11,7 +11,7 @@ interface Slide {
 
 const slides = ref<Slide[]>([
   {
-    image: 'src/assets/images/slide-image.jpg',
+    image: '/images/slide-image.jpg',
     title: 'Краски',
     description: [
       'Идеально подходит для стен и других поверхностей.',
@@ -19,7 +19,7 @@ const slides = ref<Slide[]>([
     ],
   },
   {
-    image: 'src/assets/images/slide-image.jpg',
+    image: '/images/slide-image.jpg',
     title: 'Краски',
     description: [
       'Идеально подходит для стен и других поверхностей.',
@@ -27,7 +27,7 @@ const slides = ref<Slide[]>([
     ],
   },
   {
-    image: 'src/assets/images/slide-image.jpg',
+    image: '/images/slide-image.jpg',
     title: 'Краски',
     description: [
       'Идеально подходит для стен и других поверхностей.',

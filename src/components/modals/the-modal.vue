@@ -19,60 +19,27 @@
   </Teleport>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { computed } from 'vue';
 import CloseIcon from '@/assets/images/svg/close.svg';
 
-export default defineComponent({
-  name: 'TheModal',
-  components: {
-    CloseIcon,
-  },
-  props: {
-    modelValue: {
-      type: Boolean,
-    },
-    title: {
-      type: String,
-      default: 'Modal',
-    },
-    position: {
-      type: String,
-      default: 'right',
-      validator: (value: string) => ['left', 'right'].includes(value),
-    },
-    className: {
-      type: String,
-    },
-  },
-  emits: ['update:modelValue'],
+const modelValue = defineModel();
 
-  computed: {
-    slideDirection(): string {
-      return `slide-${this.position}`;
-    },
+interface IProps {
+  title: string;
+  position: 'left' | 'right';
+  className?: string;
+}
 
-    classes(): string {
-      return `${this.position} ${this.className}`;
-    },
-  },
+const props = defineProps<IProps>();
 
-  watch: {
-    modelValue: (current: boolean) => {
-      if (current) {
-        document.body.classList.add('no-scroll');
-      } else {
-        document.body.classList.remove('no-scroll');
-      }
-    },
-  },
+const slideDirection = computed(() => `slide-${props.position}`);
 
-  methods: {
-    closeModal(): void {
-      this.$emit('update:modelValue', false);
-    },
-  },
-});
+const closeModal = () => {
+  modelValue.value = false;
+};
+
+const classes = computed(() => `${props.position} ${props.className}`);
 </script>
 
 <style scoped>
