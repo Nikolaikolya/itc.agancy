@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 18px;
+  font-weight: 300;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --white-color: #fff;
+  --second-color: #7BB899FF;
+  --back-color: #000000;
+
+  --main-color-text: #1F2020FF;
+  --popup-color: rgba(0, 0, 0, 0.7);
+  --button-border-color: rgba(0, 0, 0, 0.1);
+  --button-background-cart: #F2F2F2FF;
+
+  --main-size: 1.6rem;
+  --second-title-size: 1.4rem;
+  --second-subtitle-size: 1.2rem;
+
+  --active-link-color: #000000;
+  --hover-link-color: #2e2e2e;
+
+  --transition-all: all 0.2s linear;
+}
+
+.button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: var(--transition-all);
+}
+
+.opacity {
+  opacity: .2;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  margin: 0 6.5rem;
+}
+
+@media (max-width: 1160px) {
+  .container {
+    margin: 0 2.4rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
